@@ -16,14 +16,14 @@ Multi-model workflows that chain LLMs with purpose. Each model does what it's be
 **Workflow Automation**
 Systems that eliminate manual, repetitive decision loops — from data ingestion to output delivery. Built to run unattended.
 
+**RAG & Memory Systems**
+Retrieval-augmented architectures with vector search, session persistence, and context-aware responses grounded in real data.
+
 **Multi-Agent Systems**
 Architectures where agents collaborate, hand off, and self-correct. With human approval gates where it matters.
 
 **Full Stack Products**
-From schema design and API layer to deployed frontend. Node.js, Vue/Nuxt, Docker, CI/CD.
-
-**Internal Tooling & Developer Automation**
-CLI tools, bots, scraping pipelines, and automation scripts that make development cycles faster.
+From schema design and API layer to deployed frontend. Vue/Nuxt, TypeScript, Node.js, MongoDB, Docker, CI/CD.
 
 ---
 
@@ -45,16 +45,42 @@ Tavily (search) → Groq/llama-3.1 (triage) → DeepSeek-V3 (CV analysis) → Te
 ### [contextforge](https://github.com/simonecamerano/contextforge)
 Local-first project memory engine for developers and AI agents.
 
-Scans a codebase and builds a structured, version-controlled memory layer in `.contextforge/` — architecture, active context, technical decisions, open questions. Queryable from the terminal or injectable as a precise context window for any LLM.
+Scans a codebase and builds a structured, version-controlled memory layer — architecture, active context, technical decisions, open questions. Queryable from the terminal or injectable as a precise context window for any LLM. Supports 12 languages, incremental updates via SHA-256 change detection, and pluggable LLM providers (Ollama, DeepSeek, offline).
+
+```
+contextforge scan    → analyse repo, populate memory docs
+contextforge update  → re-sync only what changed
+contextforge ask "how is authentication handled?"
+```
 
 `TypeScript` `CLI` `LLM-agnostic` `Ollama` `DeepSeek` `Vitest`
 
 ---
 
-### [JouleZeroPointWeb](https://github.com/simonecamerano/JouleZeroPointWeb)
-Full stack web application. *(details in repo)*
+### [includo-guide](https://github.com/simonecamerano/includo-guide)
+Full-stack RAG-powered vocational orientation platform.
 
-`Vue/Nuxt` `Node.js` `Full Stack`
+Production-ready system connecting individuals with artisan training paths. Built on a custom vector store with cosine similarity search, a modular prompt factory with pedagogical constraints, and server-side session persistence across restarts.
+
+`React` `Node.js` `Express` `OpenAI` `RAG` `Vector Search` `Docker`
+
+---
+
+### [workflow-multiagents](https://github.com/simonecamerano/workflow-multiagents)
+Multi-model AI orchestration system for software development.
+
+A structured protocol for distributing tasks across specialized AI models — each with a defined role, named fallback, and clear boundaries. The orchestrator decomposes tasks, assigns models by capability, monitors rate limits, and requires explicit approval before executing. Model-agnostic: swap the role table to adapt it to any stack.
+
+`Multi-agent` `Orchestration` `Workflow Design` `Claude` `Gemini` `DeepSeek`
+
+---
+
+### [JouleZeroPointWeb](https://github.com/simonecamerano/JouleZeroPointWeb)
+Cyberpunk strategic card game with full-stack web platform and AI integration.
+
+A complete product — card database, deckbuilder, JWT auth system, PDF/TTS export, and an LLM-powered in-game terminal (Zero Point Terminal) that handles lore retrieval, card stats, and real-time rule arbitration — fully in character. Live at [joulezeropoint.com](https://www.joulezeropoint.com).
+
+`Vue 3` `TypeScript` `Node.js` `MongoDB` `OpenAI` `Docker` `Pinia` `Vite`
 
 ---
 
