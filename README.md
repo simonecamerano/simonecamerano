@@ -42,12 +42,12 @@ Tavily (search) → Groq/llama-3.1 (triage) → DeepSeek-V3 (CV analysis) → Te
 
 ---
 
-### [DevCouncil AI](https://github.com/simonecamerano/DevCouncil)
-Multi-agent software engineering orchestration system.
+### [contextforge](https://github.com/simonecamerano/contextforge)
+Local-first project memory engine for developers and AI agents.
 
-Three AI roles — architect, implementer, reviewer — operating in a structured workflow with mandatory human approval gates. Not a chatbot. An engineered process.
+Scans a codebase and builds a structured, version-controlled memory layer in `.contextforge/` — architecture, active context, technical decisions, open questions. Queryable from the terminal or injectable as a precise context window for any LLM.
 
-`Multi-agent` `Orchestration` `Claude` `Codex` `Gemini` `Workflow Design`
+`TypeScript` `CLI` `LLM-agnostic` `Ollama` `DeepSeek` `Vitest`
 
 ---
 
